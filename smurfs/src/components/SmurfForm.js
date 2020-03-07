@@ -1,6 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import  SmurfContext  from '../contexts/SmurfContext';
+// import  SmurfContext  from '../contexts/SmurfContext';
 
 const SmurfForm = (props) => {
     // const { addSmurf } = useContext(SmurfContext);
@@ -10,10 +10,6 @@ const SmurfForm = (props) => {
         height: '',
         id: ''
     });
-
-    // const addSmurf = () => {
-
-    // }
 
 
     const handleChanges = e => {
