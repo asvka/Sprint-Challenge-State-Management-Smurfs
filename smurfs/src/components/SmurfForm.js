@@ -1,14 +1,20 @@
 import React, { useState, useContext } from 'react';
+import axios from 'axios';
 import  SmurfContext  from '../contexts/SmurfContext';
 
-const SmurfForm = () => {
-    const { addSmurf } = useContext(SmurfContext);
+const SmurfForm = (props) => {
+    // const { addSmurf } = useContext(SmurfContext);
     const [ smurf, setSmurf ] = useState({
         name: '',
         age: '',
         height: '',
         id: ''
     });
+
+    // const addSmurf = () => {
+
+    // }
+
 
     const handleChanges = e => {
         setSmurf({
@@ -19,7 +25,13 @@ const SmurfForm = () => {
     }
     const handleSubmitSmurfForm = e => {
         e.preventDefault();
-        addSmurf(smurf);
+        axios
+        .post('http://localhost:3333/smurfs', smurf)
+        .then(res => {
+            console.log(res.data)})
+        .catch(err => {
+            console.log('You smurfed up everything...', err);
+        })
     }
 
     return (
@@ -45,10 +57,10 @@ const SmurfForm = () => {
                     onChange={handleChanges}
                     />
                     <button
-                    onClick={handleSubmitSmurfForm}
-                    className='add-smurf-button'>
-                        Add a new smurf to the village!
-                        </button>
+                        onClick={handleSubmitSmurfForm}
+                        className='add-smurf-button'>
+                            Add a new smurf to the village!
+                    </button>
                 </label>
             </form>
         </div>
