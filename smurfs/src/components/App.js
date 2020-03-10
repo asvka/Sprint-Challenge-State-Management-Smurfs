@@ -28,6 +28,7 @@ const App = () => {
     <SmurfContext.Provider value= {{ addSmurf, smurf }} >
       <div className="App">
         <SmurfList />
+        <img width='200px' src={require('../img/02.png')} />
         <SmurfForm />
       </div>
     </SmurfContext.Provider>

@@ -17,5 +17,5 @@
     Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object.
 
 5. What is your favorite state management system you've learned and this sprint? Please explain why!
-    
-    At first, I thought I really liked redux and still do-- but I LOVE the simplicity of Context API! I love how smooth and dry it makes my codes. :D 
+
+    At first, I thought I really liked redux and still do-- but I LOVE the simplicity of Context API! I love how smooth and dry it makes my codes. :D

@@ -6,7 +6,8 @@ const SmurfList = () => {
 const { smurf } = useContext(SmurfContext);
     return (
         <div>
-            <div>
+            <img className='logo' src={require('../img/01.png')} width='200px' alt='logo'/>
+            <div className='card-deck'>
                 {smurf.map(item =>
                     <SmurfCard
                     key={item.id}
